@@ -9,12 +9,12 @@ function YourBotArmy({onDelete,botArmy}) {
   }
  
   return (
-    <div style={{display:"flex"}}>
-      {/* Display bots in the army and provide a way to delete them */}
-      <h2>Your Bot Army</h2>
       <div>
-        
-      </div>
+       < h2>Your Bot Army</h2>
+          <div style={{display:"flex"}}>
+      {/* Display bots in the army and provide a way to delete them */}
+      
+    
       { botArmy && botArmy.map((bot) => (
          <div key={bot.id} className="bot-card" >
            <img src={bot.avatar_url} alt="bot avator"onClick={() => onDelete(bot.id)}/>
@@ -31,6 +31,8 @@ function YourBotArmy({onDelete,botArmy}) {
        </div>
       ))}
     </div>
+      </div>
+  
   );
 }
 
